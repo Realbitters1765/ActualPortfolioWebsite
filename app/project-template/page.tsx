@@ -200,15 +200,83 @@ export default function ProjectTemplate() {
       <section id="vfx" className="relative py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-white mb-12">Visual Effects</h2>
-          <div className="relative aspect-video rounded-xl overflow-hidden">
-            <video
-              src="/ultimate move.mp4"
-              className="w-full h-full object-cover"
-              controls
-              autoPlay
-              loop
-              muted
-            />
+          
+          {/* Ultimate Animation Video */}
+          <div className="mb-20">
+            <h3 className="text-2xl font-bold text-white mb-6">Ultimate Animation</h3>
+            <div className="relative aspect-video rounded-xl overflow-hidden">
+              <video
+                src="/Ultimate Animation.mp4"
+                className="w-full h-full object-cover"
+                controls
+                autoPlay
+                loop
+                muted
+              />
+            </div>
+          </div>
+
+          {/* Visual Effects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* VFX 1 */}
+            <div className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
+              <div className="relative aspect-video">
+                <Image
+                  src="/VFX1.png"
+                  alt="Visual Effect 1"
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">Particle System</h3>
+                <p className="text-gray-300">
+                  Custom particle system implementation with dynamic behavior and color transitions.
+                  Features include velocity-based movement and collision response.
+                </p>
+              </div>
+            </div>
+
+            {/* VFX 2 */}
+            <div className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
+              <div className="relative aspect-video">
+                <Image
+                  src="/WaterShaderImg1.png"
+                  alt="Visual Effect 2"
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">Water Shader</h3>
+                <p className="text-gray-300">
+                  Realistic water shader with dynamic wave patterns and reflection mapping.
+                  Includes foam generation and depth-based transparency.
+                </p>
+              </div>
+            </div>
+
+            {/* VFX 3 */}
+            <div className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
+              <div className="relative aspect-video">
+                <Image
+                  src="/WaterShaderImg2.png"
+                  alt="Visual Effect 3"
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">Holographic Effect</h3>
+                <p className="text-gray-300">
+                  Advanced holographic shader with scan lines and chromatic aberration.
+                  Features include dynamic distortion and interactive light response.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
