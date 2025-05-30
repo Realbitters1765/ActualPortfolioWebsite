@@ -136,13 +136,6 @@ export default function ProjectTemplate() {
               <span className="relative z-10 text-white group-hover:text-white transition-colors duration-300">Shaders</span>
             </a>
             <a
-              href="#animations"
-              className="group relative px-8 py-4 bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-red-700/50 to-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <span className="relative z-10 text-white group-hover:text-white transition-colors duration-300">Animations</span>
-            </a>
-            <a
               href="#vfx"
               className="group relative px-8 py-4 bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden"
             >
@@ -272,6 +265,50 @@ export default function ProjectTemplate() {
           </div>
         </div>
       </section>
+
+      <div className="pointer-events-none fixed inset-0 z-10">
+        {[...Array(30)].map((_, i) => {
+          const left = Math.random() * 100;
+          const size = 6 + Math.random() * 10;
+          const duration = 3 + Math.random() * 3;
+          const delay = Math.random() * 4;
+          const opacity = 0.5 + Math.random() * 0.5;
+          return (
+            <div
+              key={i}
+              className="absolute bottom-0 rounded-full bg-gradient-to-t from-yellow-400 via-orange-500 to-transparent shadow-lg animate-ember"
+              style={{
+                left: `${left}%`,
+                width: `${size}px`,
+                height: `${size * 1.5}px`,
+                opacity,
+                animationDuration: `${duration}s`,
+                animationDelay: `${delay}s`,
+              }}
+            />
+          );
+        })}
+        <style jsx global>{`
+          @keyframes ember {
+            0% {
+              transform: translateY(0) scale(1) rotate(0deg);
+              opacity: 1;
+            }
+            80% {
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(-80vh) scale(0.7) rotate(20deg);
+              opacity: 0;
+            }
+          }
+          .animate-ember {
+            animation-name: ember;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+        `}</style>
+      </div>
     </div>
   );
 } 
