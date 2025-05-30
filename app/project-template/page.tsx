@@ -53,16 +53,16 @@ export default function ProjectTemplate() {
 
   const shaderImages = [
     {
-      src: "/WaterShaderImg2.png",
-      alt: "Custom Shader - Holographic Effect"
+      src: "/CellShader.png",
+      alt: "Custom Shader - Cell Shader"
     },
     {
-      src: "/WaterShaderImg1.png",
-      alt: "Custom Shader - Dissolve Effect"
+      src: "/impact frame shaderoff.png",
+      alt: "Custom Shader - Impact Frame Shader Off"
     },
     {
-      src: "/FullScreenShadeer.png",
-      alt: "Custom Shader - Environment Blend"
+      src: "/impact frame shaderon.png",
+      alt: "Custom Shader - Impact Frame Shader On"
     }
   ];
 
@@ -186,16 +186,8 @@ export default function ProjectTemplate() {
         </div>
       </section>
 
-      {/* Animations Section */}
-      <section id="animations" className="relative py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-white mb-12">Animation Showcase</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Add your animation content here */}
-          </div>
-        </div>
-      </section>
 
+ 
       {/* VFX Section */}
       <section id="vfx" className="relative py-20">
         <div className="container mx-auto px-6">
