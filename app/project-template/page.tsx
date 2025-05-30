@@ -222,7 +222,7 @@ export default function ProjectTemplate() {
             <div className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
               <div className="relative aspect-video">
                 <Image
-                  src="/VFX1.png"
+                  src="/VisualEffect1.png"
                   alt="Visual Effect 1"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-500"
@@ -242,7 +242,7 @@ export default function ProjectTemplate() {
             <div className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
               <div className="relative aspect-video">
                 <Image
-                  src="/WaterShaderImg1.png"
+                  src="/VisualEffect2.png"
                   alt="Visual Effect 2"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-500"
@@ -262,7 +262,7 @@ export default function ProjectTemplate() {
             <div className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
               <div className="relative aspect-video">
                 <Image
-                  src="/WaterShaderImg2.png"
+                  src="/visualeffect3.png"
                   alt="Visual Effect 3"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-500"
