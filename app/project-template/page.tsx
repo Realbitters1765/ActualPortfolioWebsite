@@ -120,7 +120,7 @@ export default function ProjectTemplate() {
         >
           <div className="relative inline-block mb-8">
             <h1 className="text-7xl md:text-8xl xl:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-red-600 to-red-700 mb-8 tracking-tight">
-              Project Showcase
+              Super Beat Dowm Battle Ultimax
             </h1>
             <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 opacity-30 blur-xl"></div>
           </div>

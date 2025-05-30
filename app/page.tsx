@@ -25,8 +25,8 @@ export default function Page() {
     },
     {
       image: "/splash image.png",
-      alt: "Project Template",
-      title: "Project Showcase",
+      alt: "SBDB Ultimax",
+      title: "SBDB Ultimax",
       description: "Shaders, Animations & Visual Effects",
       link: "/project-template"
     }
