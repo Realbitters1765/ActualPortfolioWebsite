@@ -24,7 +24,7 @@ export default function Page() {
       link: "/3dart"
     },
     {
-      image: "/FullScreenShadeer.png",
+      image: "/splash image.png",
       alt: "Project Template",
       title: "Project Showcase",
       description: "Shaders, Animations & Visual Effects",
