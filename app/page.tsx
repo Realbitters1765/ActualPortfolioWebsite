@@ -78,7 +78,7 @@ export default function Page() {
             Featured Work
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
             {/* Technical Art Card */}
             <div className="group relative">
               <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
