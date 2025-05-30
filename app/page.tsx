@@ -116,8 +116,8 @@ export default function Page() {
                 &#8592;
               </button>
               <div className="flex-1 flex justify-center">
-                <div className="group relative w-full max-w-3xl md:max-w-4xl lg:max-w-5xl">
-                  <div className="relative overflow-hidden rounded-2xl aspect-[16/9] md:aspect-[16/7] lg:aspect-[16/6]" style={{ minHeight: '320px' }}>
+                <div className="group relative w-full max-w-xl md:max-w-2xl lg:max-w-3xl">
+                  <div className="relative overflow-hidden rounded-2xl aspect-square" style={{ minHeight: '400px' }}>
                     <Image
                       src={featuredCards[carouselIndex].image}
                       alt={featuredCards[carouselIndex].alt}
