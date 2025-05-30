@@ -230,10 +230,10 @@ export default function ProjectTemplate() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Particle System</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Advanced Visual Effects</h3>
                 <p className="text-gray-300">
-                  Custom particle system implementation with dynamic behavior and color transitions.
-                  Features include velocity-based movement and collision response.
+                  Custom visual effects created using Unity's visual effect graph, using a couple of custom scrolling texture shaders to produce the intended effect.
+                  
                 </p>
               </div>
             </div>
@@ -250,10 +250,10 @@ export default function ProjectTemplate() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Water Shader</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Attack Visual Effects</h3>
                 <p className="text-gray-300">
-                  Realistic water shader with dynamic wave patterns and reflection mapping.
-                  Includes foam generation and depth-based transparency.
+                  Visual effects used to enhance the visual appeal of the games combat system.
+                  
                 </p>
               </div>
             </div>
@@ -270,10 +270,10 @@ export default function ProjectTemplate() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Holographic Effect</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Laser Pillar GRaph</h3>
                 <p className="text-gray-300">
-                  Advanced holographic shader with scan lines and chromatic aberration.
-                  Features include dynamic distortion and interactive light response.
+                  This is the graph used to create the laser pillar effect shown in the ultimate effect.
+                  
                 </p>
               </div>
             </div>
