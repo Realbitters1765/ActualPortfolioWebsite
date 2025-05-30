@@ -1,12 +1,41 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Page() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
+
+  const featuredCards = [
+    {
+      image: "/CoverImg1.png",
+      alt: "Technical Art",
+      title: "Technical Art",
+      description: "Shaders, VFX, and Technical Solutions",
+      link: "/technicalart"
+    },
+    {
+      image: "/MeatPlaceImg1.png",
+      alt: "3D Art",
+      title: "3D Art",
+      description: "Character Models & Environment Design",
+      link: "/3dart"
+    },
+    {
+      image: "/FullScreenShadeer.png",
+      alt: "Project Template",
+      title: "Project Showcase",
+      description: "Shaders, Animations & Visual Effects",
+      link: "/project-template"
+    }
+  ];
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const totalCards = featuredCards.length;
+
+  const goToPrev = () => setCarouselIndex((prev) => (prev - 1 + totalCards) % totalCards);
+  const goToNext = () => setCarouselIndex((prev) => (prev + 1) % totalCards);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -77,120 +106,71 @@ export default function Page() {
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
             Featured Work
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
-            {/* Technical Art Card */}
-            <div className="group relative">
-              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
-                <Image
-                  src="/CoverImg1.png"
-                  alt="Technical Art"
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 className="text-2xl font-bold text-white mb-3">Technical Art</h3>
-                <p className="text-gray-300 mb-4">
-                  Shaders, VFX, and Technical Solutions
-                </p>
-                <Link
-                  href="/technicalart"
-                  className="inline-flex items-center text-white hover:text-primary transition-colors duration-300"
-                >
-                  <span>Explore Work</span>
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+          <div className="relative max-w-2xl mx-auto">
+            <div className="flex items-center justify-between">
+              <button
+                onClick={goToPrev}
+                className="p-2 rounded-full bg-white/10 text-white hover:bg-primary/80 transition-colors duration-300"
+                aria-label="Previous"
+              >
+                &#8592;
+              </button>
+              <div className="flex-1 flex justify-center">
+                <div className="group relative w-full max-w-md">
+                  <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                    <Image
+                      src={featuredCards[carouselIndex].image}
+                      alt={featuredCards[carouselIndex].alt}
+                      fill
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                     />
-                  </svg>
-                </Link>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <h3 className="text-2xl font-bold text-white mb-3">{featuredCards[carouselIndex].title}</h3>
+                    <p className="text-gray-300 mb-4">
+                      {featuredCards[carouselIndex].description}
+                    </p>
+                    <Link
+                      href={featuredCards[carouselIndex].link}
+                      className="inline-flex items-center text-white hover:text-primary transition-colors duration-300"
+                    >
+                      <span>Explore Work</span>
+                      <svg
+                        className="w-5 h-5 ml-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
               </div>
+              <button
+                onClick={goToNext}
+                className="p-2 rounded-full bg-white/10 text-white hover:bg-primary/80 transition-colors duration-300"
+                aria-label="Next"
+              >
+                &#8594;
+              </button>
             </div>
-
-            {/* 3D Art Card */}
-            <div className="group relative">
-              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
-                <Image
-                  src="/MeatPlaceImg1.png"
-                  alt="3D Art"
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
+            {/* Carousel indicators */}
+            <div className="flex justify-center mt-4 space-x-2">
+              {featuredCards.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`w-3 h-3 rounded-full ${carouselIndex === idx ? 'bg-primary' : 'bg-white/20'}`}
+                  onClick={() => setCarouselIndex(idx)}
+                  aria-label={`Go to slide ${idx + 1}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 className="text-2xl font-bold text-white mb-3">3D Art</h3>
-                <p className="text-gray-300 mb-4">
-                  Character Models & Environment Design
-                </p>
-                <Link
-                  href="/3dart"
-                  className="inline-flex items-center text-white hover:text-primary transition-colors duration-300"
-                >
-                  <span>Explore Work</span>
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Project Template Card */}
-            <div className="group relative">
-              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
-                <Image
-                  src="/splash image.png"
-                  alt="Project Template"
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 className="text-2xl font-bold text-white mb-3">Project Showcase</h3>
-                <p className="text-gray-300 mb-4">
-                  Shaders, Animations & Visual Effects
-                </p>
-                <Link
-                  href="/project-template"
-                  className="inline-flex items-center text-white hover:text-primary transition-colors duration-300"
-                >
-                  <span>Explore Work</span>
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
+              ))}
             </div>
           </div>
         </div>
