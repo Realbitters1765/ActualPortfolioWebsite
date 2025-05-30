@@ -159,7 +159,7 @@ export default function Page() {
             <div className="group relative">
               <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                 <Image
-                  src="/FullScreenShadeer.png"
+                  src="/splash image.png"
                   alt="Project Template"
                   fill
                   className="object-cover transform group-hover:scale-110 transition-transform duration-700"

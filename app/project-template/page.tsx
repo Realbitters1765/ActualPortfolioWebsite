@@ -125,7 +125,7 @@ export default function ProjectTemplate() {
             <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 opacity-30 blur-xl"></div>
           </div>
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Exploring the intersection of art and technology through shaders, animations, and visual effects
+            My best contributions and work on this project.
           </p>
           <div className="flex items-center justify-center space-x-8">
             <a
@@ -206,7 +206,7 @@ export default function ProjectTemplate() {
             <h3 className="text-2xl font-bold text-white mb-6">Ultimate Animation</h3>
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <video
-                src="/Ultimate Animation.mp4"
+                src="/ultimate move.mp4"
                 className="w-full h-full object-cover"
                 controls
                 autoPlay
