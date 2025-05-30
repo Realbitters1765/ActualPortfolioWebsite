@@ -154,44 +154,6 @@ export default function Page() {
                 </Link>
               </div>
             </div>
-
-            {/* Project Template Card */}
-            <div className="group relative">
-              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
-                <Image
-                  src="/project1.png"
-                  alt="Project Template"
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 className="text-2xl font-bold text-white mb-3">Project Template</h3>
-                <p className="text-gray-300 mb-4">
-                  A showcase of my latest project
-                </p>
-                <Link
-                  href="/project-template"
-                  className="inline-flex items-center text-white hover:text-primary transition-colors duration-300"
-                >
-                  <span>Explore Work</span>
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
 
